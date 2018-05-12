@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBD_Lab3_ODB", "SBD_Lab3_ODB\SBD_Lab3_ODB.csproj", "{46CEF651-AA96-4516-B7D1-E3DBDB2EA55D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46CEF651-AA96-4516-B7D1-E3DBDB2EA55D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46CEF651-AA96-4516-B7D1-E3DBDB2EA55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46CEF651-AA96-4516-B7D1-E3DBDB2EA55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46CEF651-AA96-4516-B7D1-E3DBDB2EA55D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16445B84-B72E-4D45-B2A1-A5F0871DDEE4}
+	EndGlobalSection
+EndGlobal
