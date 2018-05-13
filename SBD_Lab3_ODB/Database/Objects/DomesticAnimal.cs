@@ -30,8 +30,7 @@ namespace SBD_Lab3_ODB.Database.Objects
 
         public override string ToString()
         {
-            return "data ur.: " + this.Born + ((IsDead) ? ", data sm.: " + this.Death : "") + ", plec: " + this.Gender + ", klasa: " + this.GetType().Name;
-
+            return base.ToString() + ", imie: " + _name;
         }
 
     }
