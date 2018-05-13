@@ -92,6 +92,12 @@ namespace SBD_Lab3_ODB.Database.Objects
 
         virtual public void MakeNoise() { Console.WriteLine("Animal.MakeNoise()"); }
 
+        public override string ToString()
+        {
+            return "data ur.: " + this.Born + ", plec: " + this.Gender + ", klasa: " + this.GetType().Name;
+        }
+
+
         //public string getName()
         //{
         //    return typeof(this.getType).Name;

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SBD_Lab3_ODB.Database.Controllers;
 using SBD_Lab3_ODB.Database;
 using SBD_Lab3_ODB.Database.Objects;
 using Sqo;
@@ -18,7 +17,6 @@ namespace SBD_Lab3_ODB
            
             Siaqodb siaqodb = SiaqodbFactory.GetInstance();
             siaqodb.DropType<Shelter>();
-
 
             Shelter shelter1 = new Shelter("ZOO");
             Shelter shelter2 = new Shelter("Internet");
@@ -35,8 +33,6 @@ namespace SBD_Lab3_ODB
             shelter1.Animals.Add(cat);
             shelter2.Animals.Add(doge);
 
-
-
             siaqodb.StoreObject(shelter1);
             siaqodb.StoreObject(shelter2);
             
@@ -51,7 +47,9 @@ namespace SBD_Lab3_ODB
                 int a = 0;
                 foreach (Animal an in sh.Animals)
                 {
-                    Console.Write("\t" + a + ". data ur.: " + an.Born + " plec: " + an.Gender + " klasa: " + an.GetType().Name + " - MakeNoise: ");
+                    Console.Write("\t" + a + ". " + an + ", MakeNoise(): ");
+
+                    //Console.Write("\t" + a + ". data ur.: " + an.Born + " plec: " + an.Gender + " klasa: " + an.GetType().Name + " - MakeNoise: ");
                     an.MakeNoise();
                     a++;
                 }
