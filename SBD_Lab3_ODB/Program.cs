@@ -99,13 +99,16 @@ namespace SBD_Lab3_ODB
             foreach (Cat anim in query3)
             {
                 Console.WriteLine("\t" + anim);
-                //siaqodb.UpdateObjectBy(cat2.Id)
             }
-            wildCat.Eat(cat2);
-            siaqodb.StoreObject(shelter1);
-            //siaqodb.UpdateObjectBy(cat2, "IsDead", "Death");
-            
 
+            Console.WriteLine("wildCat zjada cat...");
+            wildCat.Eat(cat2);
+
+
+            // aktualizacja obiektow
+            siaqodb.StoreObject(cat2);
+            siaqodb.StoreObject(wildCat);
+            
 
             Console.WriteLine("Wszystkie koty po jedzeniu:");
             var query4 = from Cat anim in siaqodb

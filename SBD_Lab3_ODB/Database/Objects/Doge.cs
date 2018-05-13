@@ -8,7 +8,7 @@ namespace SBD_Lab3_ODB.Database.Objects
 {
     class Doge : Dog
     {
-        public Doge() : base("Male", "Doge", "Doge")
+        public Doge() : base("male", "Doge", "Doge")
         {
             
         }
