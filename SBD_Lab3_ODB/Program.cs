@@ -16,16 +16,22 @@ namespace SBD_Lab3_ODB
         {
            
             Siaqodb siaqodb = SiaqodbFactory.GetInstance();
+
+            Console.WriteLine("Wyczyszczenie bazy danych");
             siaqodb.DropType<Shelter>();
 
+            Console.WriteLine("Utworzenie obiektow klasy Shelter");
             Shelter shelter1 = new Shelter("ZOO");
             Shelter shelter2 = new Shelter("Internet");
 
+            Console.WriteLine("Utworzenie obiektow zwierzat");
             Dog dog = new Dog("male", "Roki", "Coton de tulear");
             Cat cat = new Cat("female", "Dafne", "British Shorthair");
             WildCat wildCat = new WildCat("male");
             Doge doge = new Doge();
 
+
+            Console.WriteLine("Przypisanie zwierzat do schronisk");
             shelter1.Animals = new List<Animal>();
             shelter2.Animals = new List<Animal>();
             shelter1.Animals.Add(dog);
@@ -33,11 +39,13 @@ namespace SBD_Lab3_ODB
             shelter1.Animals.Add(cat);
             shelter2.Animals.Add(doge);
 
+
+            Console.WriteLine("Umieszczenie obiektow schronisk w bazie");
             siaqodb.StoreObject(shelter1);
             siaqodb.StoreObject(shelter2);
-            
            
             siaqodb.Flush();
+
             Console.WriteLine("Wczytanie wszystkich obiektów z bazy, prezentacja dziedziczenia i polimorfizmu:");
             IObjectList<Shelter> allShelters = siaqodb.LoadAll<Shelter>();
             int s = 0;
@@ -53,6 +61,11 @@ namespace SBD_Lab3_ODB
                 }
                 s++;
             }
+
+
+
+
+
             
             SiaqodbFactory.CloseDatabase();
 
