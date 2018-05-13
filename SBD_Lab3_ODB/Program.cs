@@ -92,7 +92,26 @@ namespace SBD_Lab3_ODB
                 Console.WriteLine("\t" + anim);
             }
 
+            Console.WriteLine("\n\nPrezentacja metod na przykladzie zjadania:");
+            Console.WriteLine("Wszystkie koty:");
+            var query3 = from Cat anim in siaqodb
+                         select anim;
+            foreach (Cat anim in query3)
+            {
+                Console.WriteLine("\t" + anim);
+            }
+            wildCat.Eat(cat2);
+            siaqodb.StoreObject(shelter1);
+            //siaqodb.UpdateObjectBy(cat2, "IsDead", "Death");
 
+
+            Console.WriteLine("Wszystkie koty po jedzeniu:");
+            var query4 = from Cat anim in siaqodb
+                         select anim;
+            foreach (Cat anim in query4)
+            {
+                Console.WriteLine("\t" + anim);
+            }
 
 
             SiaqodbFactory.CloseDatabase();

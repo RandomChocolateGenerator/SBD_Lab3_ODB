@@ -29,7 +29,11 @@ namespace SBD_Lab3_ODB.Database.Objects
         override public void MakeNoise() { Console.WriteLine("DomesticAnimal.MakeNoise()"); }
         public override string ToString()
         {
-            return "data ur.: " + this.Born + ", plec: " + this.Gender + ", klasa: " + this.GetType().Name + ", imie:" + this.Name + ", rasa: " + this.Race;
+            if(!IsDead)
+            return "data ur.: " + this.Born + ", plec: " + this.Gender + ", klasa: " + this.GetType().Name + ", imie: " + this.Name + ", rasa: " + this.Race;
+            else
+                return "data ur.: " + this.Born + ", data sm.: " + this.Death + ", plec: " + this.Gender + ", klasa: " + this.GetType().Name + ", imie: " + this.Name + ", rasa: " + this.Race;
+
         }
 
     }
