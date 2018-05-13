@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\Controllers\DBController.cs" />
     <Compile Include="Database\Objects\Animal.cs" />
     <Compile Include="Database\Objects\Carnivorous.cs" />
     <Compile Include="Database\Objects\WildCat.cs" />

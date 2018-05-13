@@ -12,7 +12,6 @@ namespace SBD_Lab3_ODB
 {
     class Program
     {
-        static DBController dbcontroller;
 
         static void Main(string[] args)
         {
