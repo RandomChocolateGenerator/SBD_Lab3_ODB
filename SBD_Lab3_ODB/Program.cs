@@ -73,7 +73,7 @@ namespace SBD_Lab3_ODB
             Console.WriteLine("\n\nPrezentacja LINQ");
 
 
-            Console.WriteLine("Koty plci zenskiej:");
+            Console.WriteLine("Wszystkie koty plci zenskiej:");
             var query1 = from Cat anim in siaqodb
                          where anim.Gender == "female"
                          select anim;
@@ -82,20 +82,16 @@ namespace SBD_Lab3_ODB
                 Console.WriteLine("\t" + anim);
             }
 
-            //Console.WriteLine("Koty plci zenskiej:");
-            //var query2 = from Cat anim in siaqodb
-            //             where anim.Gender == "female"
-            //             select anim;
-            //foreach (Cat anim in query2)
-            //{
-            //    Console.WriteLine("\t" + anim);
-            //}
-
+            Console.WriteLine("Wszystkie piesely:");
+            var query2 = from Doge anim in siaqodb
+                         select anim;
+            foreach (Doge anim in query2)
+            {
+                Console.WriteLine("\t" + anim);
+            }
 
 
             SiaqodbFactory.CloseDatabase();
-
-  
 
             Console.ReadKey();
         }
