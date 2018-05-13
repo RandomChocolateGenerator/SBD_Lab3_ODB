@@ -19,6 +19,13 @@ namespace SBD_Lab3_ODB
 
             Console.WriteLine("Wyczyszczenie bazy danych");
             siaqodb.DropType<Shelter>();
+            siaqodb.DropType<Dog>();
+            siaqodb.DropType<Cat>();
+            siaqodb.DropType<WildCat>();
+            siaqodb.DropType<Doge>();
+            siaqodb.DropType<Animal>();
+            siaqodb.DropType<DomesticAnimal>();
+            //siaqodb.DropAllTypes(); - nie dziala, niespojnosc w dokumentacji
 
             Console.WriteLine("Utworzenie obiektow klasy Shelter");
             Shelter shelter1 = new Shelter("ZOO");
@@ -63,10 +70,29 @@ namespace SBD_Lab3_ODB
             }
 
 
+            Console.WriteLine("\n\nPrezentacja LINQ");
+
+
+            Console.WriteLine("Koty plci zenskiej:");
+            var query1 = from Cat anim in siaqodb
+                         where anim.Gender == "female"
+                         select anim;
+            foreach (Cat anim in query1)
+            {
+                Console.WriteLine("\t" + anim);
+            }
+
+            //Console.WriteLine("Koty plci zenskiej:");
+            //var query2 = from Cat anim in siaqodb
+            //             where anim.Gender == "female"
+            //             select anim;
+            //foreach (Cat anim in query2)
+            //{
+            //    Console.WriteLine("\t" + anim);
+            //}
 
 
 
-            
             SiaqodbFactory.CloseDatabase();
 
   
