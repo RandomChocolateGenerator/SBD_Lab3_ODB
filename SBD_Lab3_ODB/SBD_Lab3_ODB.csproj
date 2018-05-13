@@ -50,12 +50,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\Objects\Animal.cs" />
+    <Compile Include="Database\Objects\Carnivorous.cs" />
+    <Compile Include="Database\Objects\Cat.cs" />
+    <Compile Include="Database\Objects\Dog.cs" />
+    <Compile Include="Database\Objects\Doge.cs" />
+    <Compile Include="Database\Objects\DomesticAnimal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\Objects\Helpers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Siaqodb.5.5.0.11\build\net451\Siaqodb.targets" Condition="Exists('..\packages\Siaqodb.5.5.0.11\build\net451\Siaqodb.targets')" />
