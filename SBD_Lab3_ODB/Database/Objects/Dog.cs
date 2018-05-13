@@ -12,14 +12,7 @@ namespace SBD_Lab3_ODB.Database.Objects
         {
         }
 
-        public void Bark()
-        {
-            Console.WriteLine("Woof!");
-        }
+        override public void MakeNoise() { Console.WriteLine("Woof!"); }
 
-        public void Wag()
-        {
-            Console.WriteLine("Wag, wag!");
-        }
     }
 }

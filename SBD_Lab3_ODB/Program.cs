@@ -27,9 +27,10 @@ namespace SBD_Lab3_ODB
             //siaqodb.DropType<Dog>();
             //siaqodb.DropType<Cat>();
             //Employee employee1 = new Employee();
-            Developer developer = new Developer();
+            Developer developer = new Developer("female");
             developer.FirstName = "Developer2";
 
+            Console.WriteLine("developer gender: " + developer.Gender);
 
             Company company = new Company();
             company.Name = "Company1";
@@ -44,6 +45,8 @@ namespace SBD_Lab3_ODB
 
             //siaqodb.StoreObject(cat);
             siaqodb.Flush();
+            Console.WriteLine("Wczytanie obiektów z bazy:");
+
 
 
             IObjectList<Company> allCompanies = siaqodb.LoadAll<Company>();
@@ -54,7 +57,7 @@ namespace SBD_Lab3_ODB
 
                 foreach (Employee emp in comp.Employees)
                 {
-                    Console.WriteLine("    Employee: " + emp.FirstName + " - MakeNoise: ");
+                    Console.WriteLine("    Employee: " + emp.FirstName + " gender: " + emp.Gender + " - MakeNoise: ");
                     emp.MakeNoise();
 
                 }

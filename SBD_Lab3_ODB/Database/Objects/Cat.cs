@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace SBD_Lab3_ODB.Database.Objects
 {
-    class Cat : Animal
+    class Cat : DomesticAnimal
     {
-        private string _name;
+        
 
-        public Cat(string gender, string name, string race) : base(gender)
+        public Cat(string gender, string name, string race) : base(gender, name, race)
         {
         }
 
-        public string Name { get => _name; set => _name = value; }
+        public Cat()
+        {
+        }
+
+        override public void MakeNoise() { Console.WriteLine("Meow!"); }
     }
 }

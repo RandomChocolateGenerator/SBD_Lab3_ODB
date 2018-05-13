@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SBD_Lab3_ODB.Database.Objects
 {
-    class DomesticAnimal : Animal
+    abstract class DomesticAnimal : Animal
     {
         private string _name;
         private string _race;
@@ -19,6 +19,14 @@ namespace SBD_Lab3_ODB.Database.Objects
             _name = name;
             _race = race;
         }
+
+        public DomesticAnimal() 
+        {
+            _name = "uknown name";
+            _race = "uknown race";
+        }
+
+        virtual public void MakeNoise() { Console.WriteLine("DomesticAnimal.MakeNoise()"); }
 
     }
 }

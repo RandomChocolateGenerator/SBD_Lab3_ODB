@@ -10,11 +10,13 @@ namespace SBD_Lab3_ODB.Database.Objects
     {
         public Doge() : base("Male", "Doge", "Doge")
         {
-            Wow();
+            
         }
 
-        public void Wow()
-        {
+        
+
+
+        override public void MakeNoise() {
             Console.WriteLine("                   ▄              ▄");
             Console.WriteLine("                  ▌▒█           ▄▀▒▌");
             Console.WriteLine("                  ▌▒▒█        ▄▀▒▒▒▐");
@@ -34,9 +36,9 @@ namespace SBD_Lab3_ODB.Database.Objects
             Console.WriteLine("              ▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀");
             Console.WriteLine("                ▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀");
             Console.WriteLine("                   ▒▒▒▒▒▒▒▒▒▒▀▀ \n");
-            Console.Write("                  Wow, such a program");
-
+            Console.Write("                  Wow, such a database");
         }
+        
 
     }
 }

@@ -22,6 +22,13 @@ namespace SBD_Lab3_ODB.Database.Objects
             _gender = gender;
         }
 
+        public Animal()
+        {
+            _born = DateTime.Now;
+            _gender = "unknown";
+        }
+
+
         public DateTime Death { get => _death; }
         public DateTime Born { get => _born; }
         public string Gender { get => _gender; }
@@ -83,6 +90,6 @@ namespace SBD_Lab3_ODB.Database.Objects
             return true;
         }
 
-
+        virtual public void MakeNoise() { Console.WriteLine("Animal.MakeNoise()"); }
     }
 }
