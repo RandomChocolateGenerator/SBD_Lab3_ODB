@@ -26,7 +26,7 @@ namespace SBD_Lab3_ODB.Database.Objects
             _race = "uknown race";
         }
 
-        virtual public void MakeNoise() { Console.WriteLine("DomesticAnimal.MakeNoise()"); }
+        override public void MakeNoise() { Console.WriteLine("DomesticAnimal.MakeNoise()"); }
 
     }
 }

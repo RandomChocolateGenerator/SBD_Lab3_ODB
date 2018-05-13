@@ -91,5 +91,10 @@ namespace SBD_Lab3_ODB.Database.Objects
         }
 
         virtual public void MakeNoise() { Console.WriteLine("Animal.MakeNoise()"); }
+
+        //public string getName()
+        //{
+        //    return typeof(this.getType).Name;
+        //}
     }
 }

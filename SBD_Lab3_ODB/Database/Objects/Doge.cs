@@ -17,6 +17,7 @@ namespace SBD_Lab3_ODB.Database.Objects
 
 
         override public void MakeNoise() {
+            Console.WriteLine("");
             Console.WriteLine("                   ▄              ▄");
             Console.WriteLine("                  ▌▒█           ▄▀▒▌");
             Console.WriteLine("                  ▌▒▒█        ▄▀▒▒▒▐");

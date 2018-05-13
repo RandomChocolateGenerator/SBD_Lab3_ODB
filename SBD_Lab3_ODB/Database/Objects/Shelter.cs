@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace SBD_Lab3_ODB.Database
 {
-    class Shelter
+     class Shelter
     {
         public string Name { get; set; }
-        public List<Animal> Animals { get; set; }
+        
 
         public Shelter(string name)
         {
@@ -19,6 +19,10 @@ namespace SBD_Lab3_ODB.Database
 
         public Shelter()
         {
+            this.Name = "Wilderness";
         }
+
+        public List<Animal> Animals { get; set; }
+
     }
 }
