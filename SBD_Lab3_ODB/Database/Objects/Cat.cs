@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace SBD_Lab3_ODB.Database.Objects
 {
-    class Cat : DomesticAnimal
+    class Cat : Animal
     {
-        public Cat(string gender, string name, string race) : base(gender, name, race)
+        private string _name;
+
+        public Cat(string gender, string name, string race) : base(gender)
         {
         }
+
+        public string Name { get => _name; set => _name = value; }
     }
 }
