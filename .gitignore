@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/SBD_Lab3_ODB/obj
+/SBD_Lab3_ODB/SBD_Lab3_ODB/bin/Debug
