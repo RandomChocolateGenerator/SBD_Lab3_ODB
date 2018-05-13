@@ -34,6 +34,7 @@ namespace SBD_Lab3_ODB
             Console.WriteLine("Utworzenie obiektow zwierzat");
             Dog dog = new Dog("male", "Roki", "Coton de tulear");
             Cat cat = new Cat("female", "Dafne", "British Shorthair");
+            Cat cat2 = new Cat("male", "Chester", "None");
             WildCat wildCat = new WildCat("male");
             Doge doge = new Doge();
 
@@ -44,6 +45,7 @@ namespace SBD_Lab3_ODB
             shelter1.Animals.Add(dog);
             shelter1.Animals.Add(wildCat);
             shelter1.Animals.Add(cat);
+            shelter1.Animals.Add(cat2);
             shelter2.Animals.Add(doge);
 
 
@@ -89,6 +91,8 @@ namespace SBD_Lab3_ODB
             {
                 Console.WriteLine("\t" + anim);
             }
+
+
 
 
             SiaqodbFactory.CloseDatabase();

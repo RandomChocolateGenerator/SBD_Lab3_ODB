@@ -70,6 +70,12 @@ namespace SBD_Lab3_ODB.Database.Objects
             return ret;
         }
 
+        public void Eat(Animal target)
+        {
+            target.Die();
+            _hunger = 0;
+        }
+
         public bool Sleep(int hours)
         {
             var ret = true;
