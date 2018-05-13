@@ -42,7 +42,7 @@ namespace SBD_Lab3_ODB
             
            
             siaqodb.Flush();
-            Console.WriteLine("Wczytanie obiektów z bazy:");
+            Console.WriteLine("Wczytanie wszystkich obiektów z bazy:");
             IObjectList<Shelter> allShelters = siaqodb.LoadAll<Shelter>();
             int s = 0;
             foreach (Shelter sh in allShelters)
@@ -51,7 +51,7 @@ namespace SBD_Lab3_ODB
                 int a = 0;
                 foreach (Animal an in sh.Animals)
                 {
-                    Console.Write("\t" + a + ". Data ur.: " + an.Born + " plec: " + an.Gender + " typ: " + an.GetType().Name + " - MakeNoise: ");
+                    Console.Write("\t" + a + ". data ur.: " + an.Born + " plec: " + an.Gender + " klasa: " + an.GetType().Name + " - MakeNoise: ");
                     an.MakeNoise();
                     a++;
                 }
