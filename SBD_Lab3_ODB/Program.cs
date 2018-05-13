@@ -38,7 +38,7 @@ namespace SBD_Lab3_ODB
             
            
             siaqodb.Flush();
-            Console.WriteLine("Wczytanie wszystkich obiektów z bazy:");
+            Console.WriteLine("Wczytanie wszystkich obiektów z bazy, prezentacja dziedziczenia i polimorfizmu:");
             IObjectList<Shelter> allShelters = siaqodb.LoadAll<Shelter>();
             int s = 0;
             foreach (Shelter sh in allShelters)
@@ -48,8 +48,6 @@ namespace SBD_Lab3_ODB
                 foreach (Animal an in sh.Animals)
                 {
                     Console.Write("\t" + a + ". " + an + ", MakeNoise(): ");
-
-                    //Console.Write("\t" + a + ". data ur.: " + an.Born + " plec: " + an.Gender + " klasa: " + an.GetType().Name + " - MakeNoise: ");
                     an.MakeNoise();
                     a++;
                 }
