@@ -57,6 +57,7 @@
     <Compile Include="Database\Objects\Dog.cs" />
     <Compile Include="Database\Objects\Doge.cs" />
     <Compile Include="Database\Objects\DomesticAnimal.cs" />
+    <Compile Include="Database\SiaqodbFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
