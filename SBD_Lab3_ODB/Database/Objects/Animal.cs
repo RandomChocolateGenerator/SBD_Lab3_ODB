@@ -100,14 +100,9 @@ namespace SBD_Lab3_ODB.Database.Objects
 
         public override string ToString()
         {
-            if(!_isDead) return "data ur.: " + this.Born + ", plec: " + this.Gender + ", klasa: " + this.GetType().Name;
-            else return "data ur.: " + this.Born + ", data sm.: " + this.Death + ", plec: " + this.Gender + ", klasa: " + this.GetType().Name;
+            return "data ur.: " + this.Born + ((_isDead) ? ", data sm.: " + this.Death : "") + ", plec: " + this.Gender + ", klasa: " + this.GetType().Name;
+            
         }
 
-
-        //public string getName()
-        //{
-        //    return typeof(this.getType).Name;
-        //}
     }
 }

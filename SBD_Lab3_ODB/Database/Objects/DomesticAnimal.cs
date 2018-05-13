@@ -27,12 +27,10 @@ namespace SBD_Lab3_ODB.Database.Objects
         }
 
         override public void MakeNoise() { Console.WriteLine("DomesticAnimal.MakeNoise()"); }
+
         public override string ToString()
         {
-            if(!IsDead)
-            return "data ur.: " + this.Born + ", plec: " + this.Gender + ", klasa: " + this.GetType().Name + ", imie: " + this.Name + ", rasa: " + this.Race;
-            else
-                return "data ur.: " + this.Born + ", data sm.: " + this.Death + ", plec: " + this.Gender + ", klasa: " + this.GetType().Name + ", imie: " + this.Name + ", rasa: " + this.Race;
+            return "data ur.: " + this.Born + ((IsDead) ? ", data sm.: " + this.Death : "") + ", plec: " + this.Gender + ", klasa: " + this.GetType().Name;
 
         }
 
